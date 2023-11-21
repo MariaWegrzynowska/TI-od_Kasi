@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Tytuł strony na pasku</title>
+    </head>
+    <body> <!-- wyśrodkowanie -->
+        <header>
+            <h1>
+                Tytuł strony
+                <div id="nav">
+                    <ul style="list-style: none;">
+                        <li><a href="Strona główna.html">Strona główna</a></li>
+                        <li><a href="Kalendarium.html">Kalendarium</a></li>
+                        <li><a href="Poczet rektorów.html">Poczet rektorów</a></li>
+                        <li><a href="Kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+        </header>
+        <h2>Nagłówek (mniejszy niż h1)</h2>
+        <p>Paragraf</p>
+        <h2>Nagłówek (mniejszy niż h1)</h2>
+        <p title="zdjęcie">
+            Paragraf + zdjęcie o wysokości 80px i szerokości 300px
+            <br/>
+            <img src="logo_uep.jpg" height="80px" width="300px" style="display: block;"/>
+        </p>
+        <h3>Nagłowek (mniejszy niż h2)</h3>
+        <div id="nav">
+            Paragraf + podpisany link
+            <a href="https://ue.poznan.pl/">Uniwersytet Ekonomiczny w Poznaniu</a> <!-- link musi być "podpisany" (to co się będzie wyświetlało jako hiperłącze)-->
+        </div>
+        <figure>
+            <audio controls="controls">
+                <source src="hejnal_uep.ogg" type="audio/ogg"/>
+                <source src="hejnal_uep.mp3" type="audio/mpeg"/>
+            </audio>
+            <figcaption>
+                Hejnał UEP
+            </figcaption>
+        </figure>
+        <p>
+            <ul style="list-style: square;">Lista punktowana
+                <li>Pierwszy element listy</li>
+                <li>Drugi element listy</li>
+            </ul>
+        </p>
+        <p>
+            <ol>Lista numerowana
+                <li>Pierwszy element listy</li>
+                <li>Drugi element listy</li>
+            </ol>
+        </p>
+        <div id="content">
+            <table border="1px" style="text-align: center;">
+                <tr> <!-- nowy wiersz-->
+                    <th>Nagłówek kolumny 1</th>
+                    <th>Nagłówek kolumny 2</th>
+                    <th>Nagłówek kolumny 3</th>
+                </tr>
+                <tr>
+                    <td>Komórka tabeli</td>
+                    <td>Komórka tabeli</td>
+                    <td>Komórka tabeli</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>a</td>
+                    <td rowspan="2">Scalona komórka z dwóch wierszy</td>
+                </tr>
+                <tr>
+                    <td>b</td>
+                    <td>b</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Scalona komórka z dwóch kolumn</td>
+                    <td>c</td>
+                </tr>
+            </table>
+        </div>
+        <div id="nav">
+            <ul>
+                <li><a href="Strona główna.html">Strona główna</a></li>
+                <li><a href="Kalendarium.html">Kalendarium</a></li>
+                <li><a href="Poczet rektorów.html">Poczet rektorów</a></li>
+                <li><a href="Kontakt.html">Kontakt</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <div id="address">
+                <header>
+                    <h2>
+                        Kontakt i dane adresowe
+                    </h2>
+                </header>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.0172960889827!2d16.914027875650252!3d52.40636274463797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47045b36a12f234d%3A0x717071fb08652af2!2sTowarowa%2055%2C%2061-001%20Pozna%C5%84!5e0!3m2!1spl!2spl!4v1699427523948!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <address>
+                    Al. Niepodległości 10, <br/>
+                    61-875 Poznań <br/>
+                    tel. +48618569000
+                </address>
+            </div>
+        </div>
+        <div id="main-content" style="width: 75%; float: left; border: 1px green solid;">
+            <p>Paragraf zajmujący 75% szerokości strony z zieloną ramką</p>
+        </div>
+        <div id="forms">
+            <h2>Kontakt</h2>
+            <form>
+                Podaj swój adres e-mail:
+                <input type="password" name="user_mail" required/>
+                <br/>
+                Oceń stronę w skali 1 do 5: <!-- radio - okrągłe, checkbox - kwardaty -->
+                <input type="radio" name="rank" value="1" required/> 1
+                <input type="radio" name="rank" value="2" required/> 2
+                <input type="radio" name="rank" value="3" required/> 3
+                <input type="radio" name="rank" value="4" required/> 4
+                <input type="radio" name="rank" value="5" required/> 5
+                <br/>
+                <input type="submit" value="Wyślij"/>
+            </form>
+        </div>
+        <div id="content">
+            <form>
+                Login: <input type="text" name="guest_login" required/>
+                E-mail: <input type="email" name="guest_mail" required/>
+                <br/>
+                Oceń naszą stronę
+                <input type="radio" name="rank" value="1"/> 1
+                <input type="radio" name="rank" value="2"/> 2
+                <input type="radio" name="rank" value="3"/> 3
+                <input type="radio" name="rank" value="4"/> 4
+                <input type="radio" name="rank" value="5"/> 5
+                <br/>
+                <textarea name="text_opinion" placeholder="Napisz, co sądzisz"></textarea>
+                <br/>
+                <input type="submit" value="Wyślij"/>
+            </form>
+        </div>
+        <aside>
+            <section class="popular_links">
+                <h2>Popularne linki</h2>
+                <a href="https://ue.poznan.pl/">Strona główna UEP</a>
+                <br/>
+                <a href="https://www.kti.ue.poznan.pl/">Strona główna KTI</a>
+            </section>
+        </aside>
+        <footer>
+            &copy; 2023 KTI &amp; UEP
+        </footer>
+    </body>
+
+</html>
